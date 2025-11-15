@@ -1,0 +1,160 @@
+/* CertificateEnglish.css */
+
+.certificate-container {
+  text-align: center;
+  padding: 40px;
+  background-color: #f4f4f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.certificate-box {
+  background: white;
+  border: 10px double #333;
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  font-family: 'Georgia', serif;
+  position: relative;
+  text-align: center;
+}
+
+.certificate-box h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.certificate-box h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+  color: #0077b6;
+}
+
+.certificate-box h3 {
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.certificate-box p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.course-details {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #0077b6;
+}
+
+.course-details p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.certificate-date {
+  margin-top: 20px;
+}
+
+.certificate-date p {
+  font-style: italic;
+  color: #666;
+}
+
+.certificate-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.certificate-actions button,
+.certificate-actions a {
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #0077b6;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.certificate-actions a:hover,
+.certificate-actions button:hover {
+  background-color: #005a87;
+}
+
+.linkedin-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #0077b5;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.linkedin-button:hover {
+  background-color: #005983;
+}
+
+@media (max-width: 600px) {
+  .certificate-box {
+    padding: 20px;
+  }
+
+  .certificate-box h1 {
+    font-size: 2rem;
+  }
+
+  .certificate-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .certificate-box h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Dark Mode Support */
+body.dark .certificate-container {
+  background-color: #1a1a2e;
+}
+
+body.dark .certificate-box {
+  background: #2c2c54;
+  border-color: #667eea;
+  color: #e0e0e0;
+}
+
+body.dark .certificate-box h1,
+body.dark .certificate-box h2,
+body.dark .certificate-box h3,
+body.dark .certificate-box p {
+  color: #e0e0e0;
+}
+
+body.dark .certificate-box h2 {
+  color: #667eea;
+}
+
+body.dark .course-details {
+  background: #40407a;
+  border-left-color: #667eea;
+}
+
+body.dark .certificate-date p {
+  color: #e0e0e0;
+}

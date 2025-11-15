@@ -1,0 +1,345 @@
+/* ComputerHindi.css */
+
+/* General container styling */
+.hindi-course-container { /* Updated class name for Hindi */
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+/* Header styling */
+.course-header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.course-header h1 {
+  margin-bottom: 10px;
+  font-size: 2.5em;
+}
+
+.course-header p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+/* Section styling */
+.lesson-section {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.lesson-section h2 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 25px;
+  font-size: 2em;
+}
+
+/* Lesson List (What you will learn) styling */
+.lesson-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.lesson-list li {
+  background-color: #e9ecef;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  color: #333;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer; /* Indicate clickable */
+}
+
+.lesson-list li:hover {
+  background-color: #dee2e6;
+  transform: translateY(-3px);
+}
+
+.lesson-list li svg {
+  margin-right: 10px;
+  color: #007bff;
+  font-size: 1.5em;
+}
+
+/* Video Card Grid styling */
+.video-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.video-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Indicate clickable */
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.video-card .thumbnail {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Fixed height for thumbnails */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-card .thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the area without distortion */
+  display: block;
+}
+
+.video-card .play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-card:hover .play-overlay {
+  opacity: 1;
+}
+
+.video-card .play-icon {
+  color: white;
+  font-size: 3em;
+  opacity: 0.9;
+}
+
+.video-card .video-info {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.video-card .video-info svg {
+  margin-right: 10px;
+  color: #007bff;
+  font-size: 1.3em;
+}
+
+/* Video Modal Styling */
+.video-modal-overlay,
+.image-info-modal-overlay { /* Added for image modal */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.video-modal-overlay[aria-modal="true"],
+.image-info-modal-overlay[aria-modal="true"] { /* Added for image modal */
+  opacity: 1;
+  visibility: visible;
+}
+
+.video-modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  position: relative;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.video-modal-overlay[aria-modal="true"] .video-modal-content {
+  transform: scale(1);
+}
+
+.video-modal-title {
+  color: #007bff;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.modal-video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 5px;
+}
+
+.close-btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 25px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #c82333;
+}
+
+/* Image Gallery Styling */
+.image-gallery {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.image-gallery h2 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 25px;
+  font-size: 2em;
+}
+
+.image-gallery .images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.image-gallery .images img {
+  width: 100%;
+  height: 150px; /* Fixed height for gallery images */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.image-gallery .images img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* New CSS for Image Info Modal */
+.image-info-modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  max-width: 500px; /* Adjust max-width as needed */
+  max-height: 90%;
+  overflow-y: auto; /* Allow scrolling for long content */
+  position: relative;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.image-info-modal-overlay[aria-modal="true"] .image-info-modal-content {
+  transform: scale(1);
+}
+
+.image-info-modal-title {
+  color: #007bff;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.image-info-description {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.image-info-points {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.image-info-points li {
+  margin-bottom: 5px;
+}
+
+
+/* Footer styling */
+.course-footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 30px;
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .course-header h1 {
+    font-size: 2em;
+  }
+
+  .course-header p {
+    font-size: 1em;
+  }
+
+  .lesson-list {
+    grid-template-columns: 1fr;
+  }
+
+  .video-card-grid,
+  .image-gallery .images {
+    grid-template-columns: 1fr;
+  }
+
+  .video-modal-content,
+  .image-info-modal-content {
+    max-width: 95%;
+    padding: 20px;
+  }
+}

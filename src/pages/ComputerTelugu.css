@@ -1,0 +1,250 @@
+/* ComputerTelugu.css */
+
+/* General container styling */
+.telugu-course-container {
+  font-family: 'Noto Sans Telugu', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+/* Header styling */
+.course-header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.course-header h1 {
+  margin-bottom: 10px;
+  font-size: 2.5em;
+}
+
+.course-header p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+/* Section styling */
+.lesson-section {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.lesson-section h2 {
+  text-align: center;
+  color: #28a745;
+  margin-bottom: 25px;
+  font-size: 2em;
+}
+
+/* Lesson list */
+.lesson-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.lesson-list li {
+  background-color: #e9f6ec;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  color: #333;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.lesson-list li:hover {
+  background-color: #d6f0de;
+  transform: translateY(-3px);
+}
+
+.lesson-list li svg {
+  margin-right: 10px;
+  color: #28a745;
+  font-size: 1.5em;
+}
+
+/* Video grid */
+.video-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 1rem;
+}
+
+.video-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.video-card:hover {
+  transform: scale(1.03);
+}
+
+.thumbnail {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-card:hover .play-overlay {
+  opacity: 1;
+}
+
+.play-icon {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.video-info {
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+/* Video Modal */
+.video-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.video-modal-overlay[aria-modal="true"] {
+  opacity: 1;
+  visibility: visible;
+}
+
+.video-modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  position: relative;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.video-modal-overlay[aria-modal="true"] .video-modal-content {
+  transform: scale(1);
+}
+
+.video-modal-title {
+  color: #28a745;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.modal-video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 5px;
+}
+
+.close-btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 25px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #c82333;
+}
+
+/* Footer */
+.course-footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 30px;
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .course-header h1 {
+    font-size: 2em;
+  }
+
+  .course-header p {
+    font-size: 1em;
+  }
+
+  .lesson-list {
+    grid-template-columns: 1fr;
+  }
+
+  .video-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-modal-content {
+    max-width: 95%;
+    padding: 20px;
+  }
+}

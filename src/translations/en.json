@@ -1,0 +1,19 @@
+{
+  "select_language": "Select Language",
+  "modules": "Available Modules",
+  "computer_usage": "Basic Computer Usage",
+    "learn_computer_basics": "Learn how to use a computer",
+
+  "mobile_usage": "Basic Mobile Usage",
+    "learn_mobile_basics": "Learn how to use a smartphone",
+
+  "security": "Digital Security & Safety",
+    "learn_digital_security": "Learn cybersecurity and safe transactions",
+
+  "quiz": "Knowledge Quiz",
+    "test_your_knowledge": "Test your digital literacy skills",
+
+  "computer_details": "Includes typing practice, using browsers, email, and basic troubleshooting.",
+  "mobile_details": "Covers camera, settings, security, WhatsApp, UPI payments, and more."
+
+}

@@ -1,0 +1,138 @@
+/* Light Mode (default) */
+.about-container {
+  padding: 3rem 2rem;
+  background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  color: #2a3b4c;
+}
+
+.about-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1e3c72;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.intro {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  color: #444;
+  animation: fadeInUp 1.5s ease;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background: #fdfdfd;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+  color: #2a5298;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.mission-section {
+  margin-top: 4rem;
+  background: #f0f8ff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInUp 1.2s ease;
+}
+
+.mission-section h2 {
+  font-size: 2rem;
+  color: #1a237e;
+  margin-bottom: 1rem;
+}
+
+.mission-section p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Dark Mode Styles */
+body.dark .about-container {
+  background: linear-gradient(to bottom right, #1c1c2b, #111);
+  color: #e0e0e0;
+}
+
+body.dark .about-container h1 {
+  color: #90caf9;
+}
+
+body.dark .intro {
+  color: #cfd8dc;
+}
+
+body.dark .feature-card {
+  background: #2a2a3b;
+  border: 1px solid #444;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .feature-card h3 {
+  color: #64b5f6;
+}
+
+body.dark .feature-card p {
+  color: #ccc;
+}
+
+body.dark .mission-section {
+  background: #263238;
+}
+
+body.dark .mission-section h2 {
+  color: #81d4fa;
+}
+
+body.dark .mission-section p {
+  color: #bbb;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+}

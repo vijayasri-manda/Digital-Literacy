@@ -1,0 +1,221 @@
+.telugu-course-container {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, #e0e7ff, #f0f4ff);
+  color: #1f1f2e;
+  padding: 2rem;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Header */
+.course-header {
+  text-align: center;
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  color: #fff;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(99, 102, 241, 0.4);
+}
+
+.course-header h1 {
+  font-size: 2.7rem;
+  margin-bottom: 0.5rem;
+  animation: slideInTop 1s ease-out;
+}
+
+.course-header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Section Headings */
+.lesson-section h2,
+.video-gallery h2,
+.image-gallery h2,
+.bonus-section h2 {
+  font-size: 1.8rem;
+  color: #4f46e5;
+  margin-bottom: 1rem;
+  border-left: 6px solid #3b82f6;
+  padding-left: 0.8rem;
+}
+
+/* Lesson List */
+.lesson-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  padding: 0;
+}
+
+.lesson-list li {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s ease, background 0.3s;
+}
+
+.lesson-list li:hover {
+  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.lesson-list svg {
+  font-size: 1.6rem;
+  color: #6366f1;
+}
+
+/* Video Grid */
+.videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.videos iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.videos iframe:hover {
+  transform: scale(1.05);
+}
+
+/* Image Gallery */
+.image-gallery .images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.images img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.15);
+}
+
+.images img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Bonus Section */
+.bonus-section ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.bonus-section li {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  border-left: 5px solid #6366f1;
+  border-radius: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.bonus-section li:hover {
+  background: rgba(240, 240, 255, 0.9);
+}
+
+/* Footer */
+.course-footer {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 3rem;
+  padding: 1rem;
+  background: #e5e7ff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInTop {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Tweaks */
+@media screen and (max-width: 768px) {
+  .course-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .videos iframe {
+    height: 180px;
+  }
+
+  .images img {
+    height: 160px;
+  }
+}
+.dark .telugu-course-container {
+  background: linear-gradient(to bottom, #1f1f2e, #2e2e3f);
+  color: #e0e7ff;
+}
+
+.dark .course-header {
+  background: linear-gradient(135deg, #4f46e5, #2563eb);
+  color: #fff;
+}
+
+.dark .lesson-section h2,
+.dark .video-gallery h2,
+.dark .image-gallery h2,
+.dark .bonus-section h2 {
+  color: #c7d2fe;
+  border-left-color: #818cf8;
+}
+
+.dark .lesson-list li {
+  background: rgba(255, 255, 255, 0.05);
+  color: #e0e7ff;
+}
+
+.dark .lesson-list li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark .videos iframe {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+}
+
+.dark .images img {
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.4);
+}
+
+.dark .bonus-section li {
+  background: rgba(255, 255, 255, 0.05);
+  border-left-color: #6366f1;
+  color: #e0e7ff;
+}
+
+.dark .bonus-section li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark .course-footer {
+  background: #2a2a3b;
+  color: #cbd5e1;
+}
